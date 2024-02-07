@@ -16,6 +16,8 @@ export class TaskController{
     const taskFound = await this.taskService.getTaskById(+id)
     if(!taskFound){
       throw new NotFoundException("Task was not found.")
+    } else{
+      return taskFound
     }
   }
   
